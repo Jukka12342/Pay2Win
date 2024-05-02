@@ -1,0 +1,37 @@
+.game-card__container {
+    display: block;
+    z-index: 1;
+    width: 296px;
+    height: 168px;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.game-card__container:hover {
+    transform: scale(1.1);
+}
+
+.game-card__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 8px 0;
+    box-sizing: border-box;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.game-card__anchor {
+    z-index: 2;
+}
+
+.game-card__img {
+    width: 296px;
+    height: 168px;
+}
