@@ -1,5 +1,4 @@
-
-.game-card__container{
+.game-card__container {
     overflow: hidden;
     box-shadow: 0 2px 20px #863ca89a;
     border-radius: 0;
@@ -36,8 +35,6 @@
     font-weight: 700;
     text-transform: uppercase;
 }
-
-
 
 .game-card__anchor {
     z-index: 2;
