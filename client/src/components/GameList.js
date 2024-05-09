@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { observer } from "mobx-react-lite";
-import { Context } from "../index";
+import { Context } from "../index.js";
 import { Row } from "react-bootstrap";
 import GameCard from "./GameCard";
 
@@ -10,9 +10,13 @@ const GameList = observer(() => {
     return (
         <div>
             <Row className="d-flex">
-                {game.games.map(gameItem =>
-                    <GameCard key={gameItem.id} name={gameItem.name} game={gameItem}/>
-                )}
+                {game.games.map((gameItem) => (
+                    <GameCard
+                        key={gameItem.id}
+                        name={gameItem.name}
+                        game={gameItem}
+                    />
+                ))}
             </Row>
         </div>
     );

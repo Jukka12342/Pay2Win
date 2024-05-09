@@ -1,18 +1,16 @@
-import React from 'react';
-
-import GameCard from "../components/GameCard";
-import {Col, Row} from "react-bootstrap";
-import Alphabet from "../components/Alphabet";
+import React, {useContext} from "react";
 import GameList from "../components/GameList";
+import {observer} from "mobx-react-lite";
+import {Context} from "../index";
 
-const Shop = () => {
+const Shop = observer(() => {
     return (
         <div className="container">
             <div className="games-container">
-                <GameList/>
+                <GameList />
             </div>
         </div>
     );
-};
+});
 
 export default Shop;

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useContext } from "react";
+import GameList from "../components/GameList";
+import { observer } from "mobx-react-lite";
+import { Context } from "../index";
 
-const Admin = () => {
-    return (
-        <div>
-            AdminPage
-        </div>
-    );
-};
+const Shop = observer(() => {
+    return <div className="container">б</div>;
+});
 
-export default Admin;
+export default Shop;

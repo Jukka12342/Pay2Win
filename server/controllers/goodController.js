@@ -15,7 +15,7 @@ class GoodController {
 
             let fileName = uuidv4() + '.jpg';
 
-            img.mv(path.resolve(dirname, '..', 'static', fileName));
+            await img.mv(path.resolve(dirname, '..', 'static', fileName));
 
             const good = await Good.create({ name, price, goodTypeId, userId, info, img: fileName });
 
