@@ -9,18 +9,13 @@
     display: flex;
     margin: 0 auto;
     height: 82px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .logo {
     display: flex;
     align-items: center;
     width: 270px;
-}
-
-.nav-bar__buttons {
-    display: flex;
-    align-items: center;
 }
 
 .logo-text {
@@ -44,7 +39,6 @@
     border-radius: 50px;
     height: 45px;
     margin: auto 0;
-    margin-right: 440px;
 }
 
 .search-box input {
@@ -63,9 +57,11 @@
 }
 
 /* Buttons */
-.nav-button {
+.nav-bar__buttons {
     display: flex;
     align-items: center;
+    justify-content: end;
+    width: 50%;
 }
 
 .nav-button__btn {

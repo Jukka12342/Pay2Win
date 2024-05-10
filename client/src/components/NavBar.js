@@ -1,3 +1,4 @@
+// ReactJS
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react-lite";
@@ -16,6 +17,7 @@ const NavBar = observer(() => {
     const { user } = useContext(Context);
 
     const logOut = () => {
+        localStorage.removeItem("token");
         user.setUser({});
         user.setIsAuth(false);
     };
@@ -69,12 +71,10 @@ const NavBar = observer(() => {
                         PAY2WIN
                     </Link>
                 </div>
-
                 <div className="search-box">
                     <input type="text" placeholder="Поиск по играм..." />
                     <img src={search_icon_light} alt="" />
                 </div>
-
                 {user.isAuth
                     ? renderAuthenticatedButtons()
                     : renderUnauthenticatedButtons()}
