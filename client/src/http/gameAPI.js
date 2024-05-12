@@ -1,7 +1,7 @@
 import { $authHost, $host } from "./index";
 
-export const createGame = async (name, img) => {
-    const { data } = await $authHost.post("api/game", { name, img });
+export const createGame = async (game) => {
+    const { data } = await $authHost.post("api/game", game);
     return data;
 };
 

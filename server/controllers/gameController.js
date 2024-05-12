@@ -1,23 +1,26 @@
-import { v4 as uuidv4 } from 'uuid';
-import { fileURLToPath } from 'url';
-import path from 'path'
-import {Game, Good, GoodInfo} from '../models/models.js'
-import ApiError from '../error/ApiError.js';
+import { v4 as uuidv4 } from "uuid";
+import { fileURLToPath } from "url";
+import path from "path";
+import { Game, Good, GoodInfo } from "../models/models.js";
+import ApiError from "../error/ApiError.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class GameController {
     async create(req, res, next) {
         try {
             let { name } = req.body;
+            if (!req.files || !req.files.img) {
+                throw new Error("No file uploaded");
+            }
             const { img } = req.files;
-
-            const __filename = fileURLToPath(import.meta.url);
-            const dirname = path.dirname(__filename);
-
-            let fileName = uuidv4() + '.jpg';
-
-            await img.mv(path.resolve(dirname, '..', 'static', fileName));
-
-            const game = await Game.create({ name, img: fileName });
+            let fileName = uuidv4() + ".jpg";
+            img.mv(path.resolve(__dirname, "..", "static", fileName));
+            const game = await Game.create({
+                name,
+                img: fileName,
+            });
 
             return res.json(game);
         } catch (e) {
@@ -30,19 +33,16 @@ class GameController {
 
         games = await Game.findAndCountAll();
 
-        return res.json(games)
+        return res.json(games);
     }
 
     async getOne(req, res) {
-        const {id} = req.params;
-        const game = await Game.findOne(
-            {
-                where: {id},
-            },
-        )
-        return res.json(game)
+        const { id } = req.params;
+        const game = await Game.findOne({
+            where: { id },
+        });
+        return res.json(game);
     }
 }
-
 
 export default new GameController();
