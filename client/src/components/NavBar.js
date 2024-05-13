@@ -1,8 +1,6 @@
-// ReactJS
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react-lite";
-import { Context } from "../index";
 import {
     ADMIN_ROUTE,
     LOGIN_ROUTE,
@@ -12,19 +10,14 @@ import {
 import search_icon_light from "../assets/search-b.png";
 import "../styles/App.css";
 import "../styles/NavBar.css";
+import Drop from "./Drop";
+import { Context } from "../index";
 
 const NavBar = observer(() => {
     const { user } = useContext(Context);
-
-    const logOut = () => {
-        localStorage.removeItem("token");
-        user.setUser({});
-        user.setIsAuth(false);
-    };
-
     const renderAuthenticatedButtons = () => (
         <div className="nav-bar__buttons">
-            <div>
+            {/*<div>
                 <Link
                     className="nav-button__btn"
                     style={{ marginRight: "20px" }}
@@ -37,7 +30,8 @@ const NavBar = observer(() => {
                 <Link className="nav-button__btn" onClick={() => logOut()}>
                     Выйти
                 </Link>
-            </div>
+    </div>*/}
+            <Drop />
         </div>
     );
 

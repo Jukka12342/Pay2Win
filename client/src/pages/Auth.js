@@ -14,7 +14,7 @@ const Auth = observer(() => {
     const location = useLocation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [login, setLogin] = useState("");
+    const [loginValue, setLoginValue] = useState("");
 
     const isLogin = location.pathname === LOGIN_ROUTE;
 
@@ -25,7 +25,7 @@ const Auth = observer(() => {
             if (isLogin) {
                 data = await login(email, password);
             } else {
-                data = await registration(login, email, password);
+                data = await registration(loginValue, email, password);
             }
             user.setUser(user);
             user.setIsAuth(true);
@@ -102,7 +102,7 @@ const Auth = observer(() => {
                                 name="login"
                                 type="login"
                                 placeholder="Логин"
-                                onChange={(e) => setLogin(e.target.value)}
+                                onChange={(e) => setLoginValue(e.target.value)}
                             />
                             <label htmlFor="login" className="field__label">
                                 Латинские буквы и цифры
