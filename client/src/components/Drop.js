@@ -1,10 +1,10 @@
 import React, { useState, useRef, useContext } from "react";
 import { useClickOutside } from "./useClickOutside";
 import "../styles/Drop.css";
-import { Context } from "../index";
 import "../assets/images/genshin.jpg";
 import { Link } from "react-router-dom";
 import { ADMIN_ROUTE } from "../utils/consts";
+import { Context } from "..";
 
 function Drop() {
     const { user } = useContext(Context);
@@ -25,15 +25,17 @@ function Drop() {
     return (
         <div className="social-icon">
             <button className="menu-button" onClick={() => setOpen(!isOpen)}>
+                {/* <genshin.jpg/> */}
                 ааа
             </button>
 
+            {/* </div> */}
             <nav className={`menu ${isOpen ? "active" : ""}`} ref={menuRef}>
                 <ul className="menu__list">
                     <li className="menu__item">Профиль</li>
                     <li className="menu__item">Настройки</li>
                     <li className="menu__item">
-                        <Link to={ADMIN_ROUTE}>Админ-панель</Link>
+                        <Link to={ADMIN_ROUTE}>Админка</Link>
                     </li>
                     <li className="menu__item">
                         <Link onClick={() => logOut()}>Выйти</Link>

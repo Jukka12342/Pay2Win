@@ -1,6 +1,8 @@
+// ReactJS
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import { Context } from "../index";
 import {
     ADMIN_ROUTE,
     LOGIN_ROUTE,
@@ -11,10 +13,10 @@ import search_icon_light from "../assets/search-b.png";
 import "../styles/App.css";
 import "../styles/NavBar.css";
 import Drop from "./Drop";
-import { Context } from "../index";
 
 const NavBar = observer(() => {
     const { user } = useContext(Context);
+
     const renderAuthenticatedButtons = () => (
         <div className="nav-bar__buttons">
             {/*<div>
