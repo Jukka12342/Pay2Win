@@ -1,131 +1,3 @@
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.profile-header {
-    background: #ffffff;
-    width: 100%;
-    display: flex;
-    height: 190px;
-    position: relative;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
-}
-
-.profile-img {
-    float: left;
-    width: 340px;
-    height: 200px;
-}
-
-.profile-img img {
-    border-radius: 50%;
-    height: 230px;
-    width: 230px;
-    border: 5px solid #fff;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    left: 50px;
-    top: 20px;
-    z-index: 5;
-    background: #fff;
-}
-
-.profile-nav-info {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 60px;
-    width: 500px;
-}
-
-.profile-nav-info h3 {
-    font-variant: small-caps;
-    font-size: 2rem;
-    font-family: sans-serif;
-    font-weight: bold;
-}
-
-.profile-nav-info .address {
-    display: flex;
-    font-weight: bold;
-    color: #777;
-}
-
-.profile-nav-info .address p {
-    margin-right: 5px;
-}
-
-.main-bd {
-    width: 100%;
-    display: flex;
-    padding-right: 15px;
-}
-
-.profile-side {
-    width: 300px;
-    background: #fff;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-    padding: 90px 30px 20px;
-    font-family: sans-serif;
-    margin-left: 10px;
-    z-index: 99;
-}
-
-.profile-side p {
-    margin-bottom: 7px;
-    color: #333;
-    font-size: 14px;
-}
-
-.profile-side p i {
-    color: #e40046;
-    margin-right: 10px;
-}
-
-.mobile-no i {
-    transform: rotateY(180deg);
-    color: #e40046;
-}
-
-.profile-btn {
-    display: flex;
-}
-
-button.chatbtn,
-button.createbtn {
-    border: 0;
-    padding: 10px;
-    width: 100%;
-    border-radius: 3px;
-    background: #4d3ef5;
-    color: #fff;
-    font-family: "Bree Serif";
-    font-size: 1rem;
-    margin: 5px 2px;
-    cursor: pointer;
-    outline: none;
-    margin-bottom: 10px;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
-}
-
-button.chatbtn:hover,
-button.createbtn:hover {
-    background: #3e32bb;
-}
-
-button.chatbtn i,
-button.createbtn i {
-    margin-right: 5px;
-}
-=======
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
 
@@ -135,19 +7,32 @@ button.createbtn i {
     box-sizing: border-box;
   }
   
+.profile-container{
+  width: 1200px;
+  display: block;
+  background-color: #9fa3da80;
+  border-radius: 20px;
+  margin: 20px auto 0;
+  padding: 60px; 
+}
+
 .profile-header {
   background: #ffffff;
   width: 100%;
-  display: flex;
+  display: block;
   height: 190px;
   position: relative;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
 }
 
+.main-profile{
+  display: block;
+}
+
 .profile-img {
-  float: left;
   width: 340px;
   height: 200px;
+  display: inline-block;
 }
 
 .profile-img img {
@@ -157,100 +42,95 @@ button.createbtn i {
   border: 5px solid #fff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
-  left: 50px;
+  right: 32px;
   top: 20px;
   z-index: 5;
   background: #fff;
 }
 
 .profile-nav-info {
-  float: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 60px;
-  width: 500px;
+  display: block;
+  white-space: normal;
+  width: 820px;
+  padding: 25px;
+  color: #000000;
 }
 
 .profile-nav-info h3 {
+  text-align: right;
   font-variant: small-caps;
   font-size: 2rem;
   font-family: sans-serif;
   font-weight: bold;
 }
 
-.profile-nav-info .address {
-  display: flex;
+.profile-inf {
+  text-align: left;
+  display: block;
+}
+.profile-inf h6 {
   font-weight: bold;
-  color: #777;
 }
 
-.profile-nav-info .address p {
-  margin-right: 5px;
-}
-
-.main-bd {
-  width: 100%;
+.profile-inf .pod {
   display: flex;
-  padding-right: 15px;
+  width: 100%;
+  white-space: normal;
+}
+
+.profile-inf-text {
+  width: 100%;
+  white-space: normal;
+  word-break: break-all
 }
 
 .profile-side {
+  display: block;
+  float: inline-end;
   width: 300px;
+  height: 690px;
+  margin-top: 20px;
   background: #fff;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  padding: 90px 30px 20px;
+  box-shadow: 0px 3px 5px #00000033;
+  padding: 60px 30px 20px;
   font-family: sans-serif;
-  margin-left: 10px;
-  z-index: 99;
 }
 
 .profile-side p {
-  margin-bottom: 7px;
-  color: #333;
-  font-size: 14px;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
-.profile-side p i {
-  color: #e40046;
-  margin-right: 10px;
+.osnova {
+  background: #ffffff;
+  display: inline-block;
+  width: 70%;
+  height: 700px;
+  box-shadow: 0px 3px 4px #00000033;
+  margin-top: 10px;
 }
 
-.mobile-no i {
-  transform: rotateY(180deg);
-  color: #e40046;
-}
-
-.profile-btn {
+.osnova-text{
   display: flex;
+  justify-content: space-between;
 }
 
-button.chatbtn,
-button.createbtn {
-  border: 0;
-  padding: 10px;
+.osnova-text h5 {
+  margin-left: 30px;
+  position: relative;
+  bottom: -30px;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.osnova-title-text {
   width: 100%;
-  border-radius: 3px;
-  background: #4d3ef5;
-  color: #fff;
-  font-family: "Bree Serif";
-  font-size: 1rem;
-  margin: 5px 2px;
-  cursor: pointer;
-  outline: none;
-  margin-bottom: 10px;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  white-space: normal;
 }
-
-button.chatbtn:hover,
-button.createbtn:hover {
-  background: #3e32bb;
-}
-
-button.chatbtn i,
-button.createbtn i {
-  margin-right: 5px;
-}
-
->>>>>>> 8d6e8a941c0d2e2a8a62a9fd33027d90649a42c5
