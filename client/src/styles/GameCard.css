@@ -11,6 +11,7 @@
     position: relative;
     transition: transform 0.3s ease;
     margin-bottom: 30px;
+    margin: 0 auto;
 }
 .game-card__container:hover {
     transform: scale(1.1);

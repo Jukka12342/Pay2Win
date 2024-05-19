@@ -14,3 +14,8 @@ export const fetchOneGame = async (id) => {
     const { data } = await $host.get("api/game/" + id);
     return data;
 };
+
+export const getGamesCount = async () => {
+    const response = await $host.get("api/game/count");
+    return response.data;
+};

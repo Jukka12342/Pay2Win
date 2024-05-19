@@ -14,7 +14,11 @@ const GameCard = ({ game }) => {
                     <div className="game-card__title game-card__title-text">
                         {game.name}
                     </div>
-                    <img src={game.img} className="game-card__img" alt="Game" />
+                    <img
+                        src={process.env.REACT_APP_API_URL + game.img}
+                        className="game-card__img"
+                        alt="Game"
+                    />
                 </Link>
             </div>
         </Col>

@@ -36,6 +36,16 @@ class GameController {
         return res.json(games);
     }
 
+    async getCount(req, res) {
+        try {
+            const count = await Game.count();
+            return res.json({ count });
+        } catch (error) {
+            console.error("Ошибка при подсчете количества игр:", error);
+            return res.status(500).json({ error: "Ошибка сервера" });
+        }
+    }
+
     async getOne(req, res) {
         const { id } = req.params;
         const game = await Game.findOne({

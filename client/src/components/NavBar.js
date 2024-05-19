@@ -1,5 +1,5 @@
 // ReactJS
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { Context } from "../index";
@@ -13,9 +13,24 @@ import search_icon_light from "../assets/search-b.png";
 import "../styles/App.css";
 import "../styles/NavBar.css";
 import Drop from "./Drop";
+import { getGamesCount } from "../http/gameAPI";
 
 const NavBar = observer(() => {
-    const { user } = useContext(Context);
+    const { user, game } = useContext(Context);
+    const [gamesCount, setGamesCount] = useState(0);
+
+    useEffect(() => {
+        fetchGamesCount();
+    }, []);
+
+    const fetchGamesCount = async () => {
+        try {
+            const response = await getGamesCount();
+            setGamesCount(response.count);
+        } catch (error) {
+            console.error("Ошибка при получении количества игр:", error);
+        }
+    };
 
     const renderAuthenticatedButtons = () => (
         <div className="nav-bar__buttons">
@@ -68,7 +83,10 @@ const NavBar = observer(() => {
                     </Link>
                 </div>
                 <div className="search-box">
-                    <input type="text" placeholder="Поиск по играм..." />
+                    <input
+                        type="text"
+                        placeholder={`Поиск по ${gamesCount} играм...`}
+                    />
                     <img src={search_icon_light} alt="" />
                 </div>
                 {user.isAuth

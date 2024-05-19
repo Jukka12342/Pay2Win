@@ -9,7 +9,7 @@ const GameList = observer(() => {
 
     return (
         <div>
-            <Row className="d-flex">
+            <Row className="d-flex" style={{ justifyContent: "space-between" }}>
                 {game.games.map((gameItem) => (
                     <GameCard
                         key={gameItem.id}
