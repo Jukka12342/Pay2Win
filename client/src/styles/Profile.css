@@ -5,132 +5,132 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  
-.profile-container{
-  width: 1200px;
-  display: block;
-  background-color: #9fa3da80;
-  border-radius: 20px;
-  margin: 20px auto 0;
-  padding: 60px; 
+}
+
+.profile-container {
+    width: 1200px;
+    display: block;
+    background-color: #9fa3da80;
+    border-radius: 20px;
+    margin: 20px auto 0;
+    padding: 60px;
 }
 
 .profile-header {
-  background: #ffffff;
-  width: 100%;
-  display: block;
-  height: 190px;
-  position: relative;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    width: 100%;
+    display: block;
+    height: 190px;
+    position: relative;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
 }
 
-.main-profile{
-  display: block;
+.main-profile {
+    display: block;
 }
 
 .profile-img {
-  width: 340px;
-  height: 200px;
-  display: inline-block;
+    width: 340px;
+    height: 200px;
+    display: inline-block;
 }
 
 .profile-img img {
-  border-radius: 50%;
-  height: 230px;
-  width: 230px;
-  border: 5px solid #fff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  right: 32px;
-  top: 20px;
-  z-index: 5;
-  background: #fff;
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+    border: 5px solid #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 32px;
+    top: 20px;
+    z-index: 5;
+    background: #fff;
 }
 
 .profile-nav-info {
-  display: block;
-  white-space: normal;
-  width: 820px;
-  padding: 25px;
-  color: #000000;
+    display: block;
+    white-space: normal;
+    width: 820px;
+    padding: 25px;
+    color: #000000;
 }
 
 .profile-nav-info h3 {
-  text-align: right;
-  font-variant: small-caps;
-  font-size: 2rem;
-  font-family: sans-serif;
-  font-weight: bold;
+    text-align: right;
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .profile-inf {
-  text-align: left;
-  display: block;
+    text-align: left;
+    display: block;
 }
 .profile-inf h6 {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .profile-inf .pod {
-  display: flex;
-  width: 100%;
-  white-space: normal;
+    display: flex;
+    width: 100%;
+    white-space: normal;
 }
 
 .profile-inf-text {
-  width: 100%;
-  white-space: normal;
-  word-break: break-all
+    width: 100%;
+    white-space: normal;
+    word-break: break-all;
 }
 
 .profile-side {
-  display: block;
-  float: inline-end;
-  width: 300px;
-  height: 690px;
-  margin-top: 20px;
-  background: #fff;
-  box-shadow: 0px 3px 5px #00000033;
-  padding: 60px 30px 20px;
-  font-family: sans-serif;
+    display: block;
+    float: inline-end;
+    width: 300px;
+    height: 690px;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0px 3px 5px #00000033;
+    padding: 60px 30px 20px;
+    font-family: sans-serif;
 }
 
 .profile-side p {
-  text-align: center;
-  font-variant: small-caps;
-  font-size: 30px;
-  font-family: sans-serif;
-  font-weight: bold;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .osnova {
-  background: #ffffff;
-  display: inline-block;
-  width: 70%;
-  height: 700px;
-  box-shadow: 0px 3px 4px #00000033;
-  margin-top: 10px;
+    background: #ffffff;
+    display: inline-block;
+    width: 70%;
+    height: 700px;
+    box-shadow: 0px 3px 4px #00000033;
+    margin-top: 10px;
 }
 
-.osnova-text{
-  display: flex;
-  justify-content: space-between;
+.osnova-text {
+    display: flex;
+    justify-content: space-between;
 }
 
 .osnova-text h5 {
-  margin-left: 30px;
-  position: relative;
-  bottom: -30px;
-  text-align: center;
-  font-variant: small-caps;
-  font-size: 2rem;
-  font-family: sans-serif;
-  font-weight: bold;
+    margin-left: 30px;
+    position: relative;
+    bottom: -30px;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .osnova-title-text {
-  width: 100%;
-  padding: 40px;
-  white-space: normal;
+    width: 100%;
+    padding: 40px;
+    white-space: normal;
 }
